@@ -7,8 +7,10 @@ var server = new http.Server(function(req,res){
     let urlParsed = url.parse(req.url,true);
     console.log(urlParsed);
 
+ 
+
     if(urlParsed.pathname == '/echo' && urlParsed.query.message){
-       // res.end('finish');
+        //res.end('finish');
         res.end(urlParsed.query.message);
 
     } else {
